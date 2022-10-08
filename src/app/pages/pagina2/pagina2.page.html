@@ -1,7 +1,11 @@
 <app-cabecera titulo="Página 2"></app-cabecera>
 
 <ion-content>
-  <ion-item>
-    
-  </ion-item>
+  <p>{{nombre}}<input type="text" [placeholder]="escribirnombre"></p>
+  <p>{{apellidos}}<input type="text" [placeholder]="escribirapellido"></p>
+  <p>{{localidad}}<input type="text" [placeholder]="escribirlocalidad"></p>
+  <p>{{estudios}}<input type="text" [placeholder]="escribircurso"></p>
+  <p>{{email}}<input type="text" [placeholder]="escribiremail"></p>
+  <p>{{contrasena}}<input type="password" minlength="8"  [placeholder]="escribircontrasena"></p>
+
 </ion-content>

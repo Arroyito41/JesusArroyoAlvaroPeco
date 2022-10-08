@@ -19,4 +19,7 @@ import { ComponentesModule } from 'src/app/componentes/componentes.module';
   ],
   declarations: [Pagina2Page]
 })
-export class Pagina2PageModule {}
+export class Pagina2PageModule {
+  
+
+}
