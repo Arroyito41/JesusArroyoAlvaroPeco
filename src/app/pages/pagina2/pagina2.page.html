@@ -1,11 +1,50 @@
 <app-cabecera titulo="Página 2"></app-cabecera>
 
 <ion-content>
-  <p>{{nombre}}<input type="text" [placeholder]="escribirnombre"></p>
-  <p>{{apellidos}}<input type="text" [placeholder]="escribirapellido"></p>
-  <p>{{localidad}}<input type="text" [placeholder]="escribirlocalidad"></p>
-  <p>{{estudios}}<input type="text" [placeholder]="escribircurso"></p>
-  <p>{{email}}<input type="text" [placeholder]="escribiremail"></p>
-  <p>{{contrasena}}<input type="password" minlength="8"  [placeholder]="escribircontrasena"></p>
-
+  <table>
+    <tr>
+      <td>{{nombre}}</td>
+      <td><input type="text" [placeholder]="escribirnombre"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{apellidos}}</td>
+      <td><input type="text" [placeholder]="escribirapellido"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{localidad}}</td>
+      <td><input type="text" [placeholder]="escribirlocalidad"></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>{{estudios}}</td>
+      <td><input type="text" [placeholder]="escribircurso"></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>{{email}}</td>
+      <td><input type="text" [placeholder]="escribiremail"></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>{{contrasena}}</td>
+      <td><input type="text" [placeholder]="escribircontrasena"></td>
+    </tr>
+  </table>
 </ion-content>
