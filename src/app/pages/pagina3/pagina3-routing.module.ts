@@ -4,9 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { Pagina3Page } from './pagina3.page';
 
 const routes: Routes = [
-  
+
   {
-    path: 'pagina3',
+    path: '',
     component: Pagina3Page,
     children: [
       {
@@ -21,18 +21,10 @@ const routes: Routes = [
         path: 'tab3',
         loadChildren: () => import('../fct/fct.module').then( m => m.FctPageModule)
       },
-      {
-        path: '',
-        redirectTo: 'tab1',
-        pathMatch: 'full',
-      },
+
     ],
   },
-  {
-        path: '',
-        redirectTo: 'tab1',
-        pathMatch: 'full',
-  }
+
 ];
 
 @NgModule({
