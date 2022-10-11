@@ -8,13 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Dam1Page implements OnInit {
 
-  varPro: string="Programacion";
-  varBbdd: string="BBDD";
-  varEndes: string="Entornos";
-  varLm: string="Lenguajes";
-  varSis: string="Sistemas";
-  varFol: string="Fol";
-  varIng: string="Ingles";
+  checkPro: boolean = false;
+  checkBd: boolean = true;
+  checkEd: boolean = false;
+  checkLm: boolean = true;
+  checkSis: boolean = false;
+  checkFol: boolean = true;
+  checkEng: boolean = false;
+
+  toastController: any;
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Programacion',
+      duration: 2000,
+    });
+    toast.present();
+  }
 
   constructor() { }
 
