@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-dam1',
@@ -9,14 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class Dam1Page implements OnInit {
 
   checkPro: boolean = false;
-  checkBd: boolean = true;
+  checkBd: boolean = false;
   checkEd: boolean = false;
-  checkLm: boolean = true;
+  checkLm: boolean = false;
   checkSis: boolean = false;
-  checkFol: boolean = true;
+  checkFol: boolean = false;
   checkEng: boolean = false;
 
-  toastController: any;
+
+
+  constructor(public toastController: ToastController) { }
+
+  ngOnInit() {
+  }
 
   async presentToast() {
     const toast = await this.toastController.create({
@@ -24,11 +30,6 @@ export class Dam1Page implements OnInit {
       duration: 2000,
     });
     toast.present();
-  }
-
-  constructor() { }
-
-  ngOnInit() {
   }
 
 }
