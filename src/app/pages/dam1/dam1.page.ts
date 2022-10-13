@@ -17,16 +17,62 @@ export class Dam1Page implements OnInit {
   checkFol: boolean = false;
   checkEng: boolean = false;
 
-
-
   constructor(public toastController: ToastController) { }
 
   ngOnInit() {
   }
-
-  async presentToast() {
+  
+  async programacion() {
     const toast = await this.toastController.create({
-      message: 'Programacion',
+      message: 'Ha elegido Programacion',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async bbdd() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Bases de Datos',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async entornos() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Entornos de Desarrollo',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async lenguajes() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Lenguajes de Marcas',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async sistemas() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Sistemas Informáticos',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async fol() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido FOL',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async ingles() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Inglés',
       duration: 2000,
     });
     toast.present();
