@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-dam1',
@@ -9,26 +10,72 @@ import { Component, OnInit } from '@angular/core';
 export class Dam1Page implements OnInit {
 
   checkPro: boolean = false;
-  checkBd: boolean = true;
+  checkBd: boolean = false;
   checkEd: boolean = false;
-  checkLm: boolean = true;
+  checkLm: boolean = false;
   checkSis: boolean = false;
-  checkFol: boolean = true;
+  checkFol: boolean = false;
   checkEng: boolean = false;
 
-  toastController: any;
+  constructor(public toastController: ToastController) { }
 
-  async presentToast() {
+  ngOnInit() {
+  }
+  
+  async programacion() {
     const toast = await this.toastController.create({
-      message: 'Programacion',
+      message: 'Ha elegido Programacion',
       duration: 2000,
     });
     toast.present();
   }
 
-  constructor() { }
+  async bbdd() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Bases de Datos',
+      duration: 2000,
+    });
+    toast.present();
+  }
 
-  ngOnInit() {
+  async entornos() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Entornos de Desarrollo',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async lenguajes() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Lenguajes de Marcas',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async sistemas() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Sistemas Informáticos',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async fol() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido FOL',
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  async ingles() {
+    const toast = await this.toastController.create({
+      message: 'Ha elegido Inglés',
+      duration: 2000,
+    });
+    toast.present();
   }
 
 }
