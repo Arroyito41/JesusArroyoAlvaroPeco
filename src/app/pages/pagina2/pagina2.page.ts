@@ -13,6 +13,7 @@ export class Pagina2Page implements OnInit {
   localidad: String;
   email: String;
   contrasena: String;
+  estudios: string;
 
   constructor() { }
 
@@ -32,6 +33,8 @@ export class Pagina2Page implements OnInit {
       alert ("rellene el campo localidad")
     }else if (this.contrasena==null){
       alert ("Rellene el campo contraseña, minimo 8 caracteres")
+    }else if (this.estudios==null){
+      alert ("Rellene el cammpo estudios")
     }
      else{
       alert("Formulario enviado");
