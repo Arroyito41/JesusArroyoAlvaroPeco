@@ -1,50 +1,35 @@
 <app-cabecera titulo="Página 2"></app-cabecera>
 
 <ion-content>
-  <table>
-    <tr>
-      <td>{{nombre}}</td>
-      <td><input type="text" [placeholder]="escribirnombre"></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{apellidos}}</td>
-      <td><input type="text" [placeholder]="escribirapellido"></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{localidad}}</td>
-      <td><input type="text" [placeholder]="escribirlocalidad"></td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>{{estudios}}</td>
-      <td><input type="text" [placeholder]="escribircurso"></td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>{{email}}</td>
-      <td><input type="text" [placeholder]="escribiremail"></td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>{{contrasena}}</td>
-      <td><input type="text" [placeholder]="escribircontrasena"></td>
-    </tr>
-  </table>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input  type="text" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Apellidos</ion-label>
+    <ion-input  type="text" [(ngModel)]="apellidos"></ion-input>
+  </ion-item>
+  <ion-item>
+
+    <ion-label>DNI</ion-label>
+    <ion-input  type="text" [(ngModel)]="dni"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Localidad</ion-label>
+    <ion-input type="text" [(ngModel)]="localidad"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="text" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contraseña</ion-label>
+    <ion-input type="password" minlength="8"></ion-input>
+  </ion-item>
+  <ion-button fill="solid" (click)="submit()">Enviar</ion-button>
+
 </ion-content>

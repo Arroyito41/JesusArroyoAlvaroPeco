@@ -7,21 +7,39 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./pagina2.page.scss'],
 })
 export class Pagina2Page implements OnInit {
-  nombre: string="Nombre: ";
-  apellidos: string="Apellidos: ";
-  localidad: string="Localidad: ";
-  estudios: string="Estudios: ";
-  email: string="Email: ";
-  contrasena: string="Password: ";
-  escribirnombre: string="Introduce aqui tu nombre";
-  escribirapellido: string="Introduce aqui tu apellido";
-  escribirlocalidad: string="Introduce aqui tu localidad";
-  escribircurso: string="Introduce aqui tu curso";
-  escribiremail: string="Introduce aqui tu email";
-  escribircontrasena: string="Introduce la contraseña";
+  nombre : String;
+  apellidos : String;
+  dni: String;
+  localidad: String;
+  email: String;
+  contrasena: String;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  submit() {
+    if(this.nombre==null){
+      alert("Rellene el campo nombre");
+    }else if(this.apellidos==null){
+      alert("Rellene el campo apellidos")
+    }else if(this.dni==null){
+      alert("Rellene el campo DNI")
+    }else if(this.email==null){
+      alert("Rellene el campo Email")
+    }else if (this.localidad==null){
+      alert ("rellene el campo localidad")
+    }else if (this.contrasena==null){
+      alert ("Rellene el campo contraseña, minimo 8 caracteres")
+    }
+     else{
+      alert("Formulario enviado");
+      this.nombre="";
+      this.apellidos="";
+      this.dni="";
+      this.localidad="";
+      this.email="";
+    }
+  }
 }
